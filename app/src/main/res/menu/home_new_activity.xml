@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_monthly_dep"
+            android:icon="@drawable/wallet_with_bill"
+            android:title="Deposit Required" />
+        <item
+            android:id="@+id/menu_lumpsum_dep"
+            android:icon="@drawable/dollar_bill_paper"
+            android:title="Lumpsum Required" />
+        <item
+            android:id="@+id/menu_monthly_withdrawal"
+            android:icon="@drawable/bitcoin_withdraw_symbol"
+            android:title="Expected Monthly withdrawal" />
+        <item
+            android:id="@+id/menu_lumpsum_withdrawal"
+            android:icon="@drawable/withdrawing_money"
+            android:title="Expected Lumpsum Withdrawal" />
+        <item
+            android:id="@+id/menu_trustee_list"
+            android:icon="@drawable/list"
+            android:title="Pension Trustees"
+
+            />
+    </group>
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_settings_home"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/menu_help_home"
+            android:icon="@drawable/info"
+            android:title="Help" />
+
+    </group>
+</menu>

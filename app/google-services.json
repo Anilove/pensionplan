@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "268750110606",
+    "firebase_url": "https://pension-plan.firebaseio.com",
+    "project_id": "pension-plan",
+    "storage_bucket": "pension-plan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268750110606:android:452c49b106f15519",
+        "android_client_info": {
+          "package_name": "org.pensionplan.pensionplan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268750110606-ee4rf7on1jg2v82rlj060sf93q27sm6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.pensionplan.pensionplan",
+            "certificate_hash": "168d7b0e8b8c7f501c658dbe101174b14d662375"
+          }
+        },
+        {
+          "client_id": "268750110606-d2o1fb2traoa1f01vqoep0rjph9j1sk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXu1qUxnsio2tk2cRuISPEs-E6riGh5w8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268750110606-d2o1fb2traoa1f01vqoep0rjph9j1sk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

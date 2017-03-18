@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/current_age_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="current age"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/current_age_text"
+        android:layout_alignRight="@id/current_age_text"
+        android:hint="age" />
+
+    <TextView
+        android:id="@+id/retire_age_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_age_text"
+        android:layout_margin="5dp"
+        android:text="Retirement age"
+        android:textSize="20sp"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/retire_age_text"
+        android:layout_alignRight="@id/retire_age_text"
+        android:layout_below="@id/current_age_text"
+        android:hint="age" />
+
+    <TextView
+        android:id="@+id/life_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/retire_age_text"
+        android:layout_margin="5dp"
+        android:text="Life expectancy"
+        android:textSize="20sp"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/life_text"
+        android:layout_alignRight="@id/life_text"
+        android:layout_below="@id/retire_age_text"
+        android:hint="age" />
+
+    <TextView
+        android:id="@+id/interest_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/life_text"
+        android:layout_margin="5dp"
+        android:text="LongTerm Interest(retirement)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/interest_text"
+        android:layout_alignRight="@id/interest_text"
+        android:layout_below="@id/life_text"
+        android:hint="15%" />
+
+    <TextView
+        android:id="@+id/inflation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interest_text"
+        android:layout_margin="5dp"
+        android:text="Long term expected inflation"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/inflation_text"
+        android:layout_alignRight="@id/inflation_text"
+        android:layout_below="@id/interest_text"
+        android:hint="12%" />
+
+    <TextView
+        android:id="@+id/monthlyWith_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inflation_text"
+        android:layout_margin="5dp"
+        android:text="Monthly Withdrawal(Retirement)"
+        android:textSize="20sp"
+
+        />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/monthlyWith_text"
+        android:layout_alignRight="@id/monthlyWith_text"
+        android:layout_below="@id/inflation_text"
+        android:hint="2000" />
+
+
+
+    <TextView
+        android:id="@+id/amountHeirs_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/monthlyWith_text"
+        android:layout_margin="5dp"
+        android:text="Amount bequeath to heirs(death)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/amountHeirs_text"
+        android:layout_alignRight="@id/monthlyWith_text"
+        android:layout_below="@id/monthlyWith_text"
+        android:hint="3000" />
+
+    <TextView
+        android:id="@+id/LumpBase_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amountHeirs_text"
+        android:layout_margin="5dp"
+        android:text="Lumpsum(amount to invest now)"
+        android:textSize="20sp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/LumpBase_text"
+        android:layout_alignRight="@id/LumpBase_text"
+        android:layout_below="@id/amountHeirs_text"
+        android:hint="200000" />
+
+    <LinearLayout
+        android:id="@+id/button_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LumpBase_text"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/calculate_butt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LumpBase_text"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@color/primary_light"
+            android:text="Calculate" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@color/primary_light"
+            android:text="Details"
+
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/yearsRetire_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_linear"
+        android:layout_margin="5dp"
+        android:text="Years to Retire"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/yearsRetire_text"
+        android:layout_alignRight="@id/yearsRetire_text"
+        android:layout_below="@id/button_linear"
+        android:hint="age" />
+
+    <TextView
+        android:id="@+id/montlyDep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yearsRetire_text"
+        android:layout_margin="5dp"
+        android:text="Monthly Deposit Required"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/montlyDep"
+        android:layout_alignRight="@id/montlyDep"
+        android:layout_below="@+id/yearsRetire_text"
+        android:hint="80" />
+
+    <TextView
+        android:id="@+id/LumpsumAtPens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/montlyDep"
+        android:layout_margin="5dp"
+        android:text="Lumpsum Required at pension"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/LumpsumAtPens"
+        android:layout_alignRight="@id/LumpsumAtPens"
+        android:layout_below="@id/montlyDep"
+        android:hint="1000" />
+
+    <TextView
+        android:id="@+id/QuaterlytWithAtPens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LumpsumAtPens"
+        android:layout_margin="5dp"
+        android:text="Quartely Withdrawal(Retirement)"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/QuaterlytWithAtPens"
+        android:layout_alignRight="@id/QuaterlytWithAtPens"
+        android:layout_below="@id/LumpsumAtPens"
+        android:hint="50000" />
+
+
+
+
+</RelativeLayout>

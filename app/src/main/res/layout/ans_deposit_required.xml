@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/yearsRetire_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_linear"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:text="Years to Retire"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/yearsRetire_text"
+        android:layout_alignRight="@id/yearsRetire_text"
+        android:layout_below="@id/button_linear"
+        android:hint="age" />
+
+    <TextView
+        android:id="@+id/montlyDep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yearsRetire_text"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:text="Monthly Deposit Required"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/montlyDep"
+        android:layout_alignRight="@id/montlyDep"
+        android:layout_below="@+id/yearsRetire_text"
+        android:hint="80" />
+
+    <TextView
+        android:id="@+id/LumpsumAtPens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/montlyDep"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:text="Lumpsum Required at pension"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/LumpsumAtPens"
+        android:layout_alignRight="@id/LumpsumAtPens"
+        android:layout_below="@id/montlyDep"
+        android:hint="1000" />
+
+    <TextView
+        android:id="@+id/QuaterlytWithAtPens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LumpsumAtPens"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:text="Quartely Withdrawal(Retirement)"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/QuaterlytWithAtPens"
+        android:layout_alignRight="@id/QuaterlytWithAtPens"
+        android:layout_below="@id/LumpsumAtPens"
+        android:hint="50000" />
+
+
+
+</RelativeLayout>

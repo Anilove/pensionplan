@@ -73,6 +73,11 @@ public class HomeActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.frame_home, new FragmentTrusteeList());
                     fragmentTransaction.commit();
                 }
+                else {
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_home, new FragmentDepRequired());
+                    fragmentTransaction.commit();
+                }
 
                 return false;
             }

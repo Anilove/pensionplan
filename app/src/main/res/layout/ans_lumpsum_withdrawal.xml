@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/yearsRetire_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_linear"
+        android:text="Years to Retire"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/yearsRetire_text"
+        android:layout_alignRight="@id/yearsRetire_text"
+        android:layout_below="@id/button_linear"
+        android:hint="30"
+        android:id="@+id/editText7" />
+
+
+
+    <TextView
+        android:id="@+id/LumpsumAtPens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yearsRetire_text"
+        android:textStyle="bold"
+        android:text="Lumpsum withdrawal(pension)"
+        android:layout_margin="5dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="8000"
+        android:id="@+id/editText8"
+        android:layout_below="@+id/yearsRetire_text"
+        android:layout_alignEnd="@id/LumpsumAtPens"
+        android:layout_alignRight="@id/LumpsumAtPens"
+        />
+
+
+    <TextView
+        android:id="@+id/QuaterlytWithAtPens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LumpsumAtPens"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:text="Quartely Withdrawal(Retirement)"
+        android:textSize="20sp" />
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/QuaterlytWithAtPens"
+        android:layout_alignRight="@id/QuaterlytWithAtPens"
+        android:layout_below="@id/LumpsumAtPens"
+        android:hint="500" />
+
+
+
+
+
+</RelativeLayout>

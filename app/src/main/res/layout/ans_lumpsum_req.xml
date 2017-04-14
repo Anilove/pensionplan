@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_linear"
+        android:layout_below="@id/life_text"
         android:text="RESULT"
         android:textStyle="bold"
         android:id="@+id/life_result"
@@ -57,7 +57,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_linear"
+        android:layout_below="@id/ans_viewtwo"
         android:text="RESULT"
         android:textStyle="bold"
         android:id="@+id/lump_result"
@@ -85,7 +85,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_linear"
+        android:layout_below="@id/lump_view_two"
         android:text="RESULT"
         android:textStyle="bold"
         android:id="@+id/resultquart"

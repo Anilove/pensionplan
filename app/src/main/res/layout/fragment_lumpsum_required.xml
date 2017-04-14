@@ -2,24 +2,37 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+
     >
 
+    <include layout="@layout/toolbar"
+        android:id="@+id/tool_month_with"
+
+        />
     <TextView
         android:id="@+id/current_age_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="current age"
+        android:layout_below="@id/tool_month_with"
         android:textStyle="bold"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
         android:textSize="20sp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tool_month_with"
+        android:layout_marginTop="20dp"
         android:layout_alignEnd="@id/current_age_text"
         android:layout_alignRight="@id/current_age_text"
         android:hint="age" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/current_age_text"
+        android:id="@+id/view_current"
+        />
 
     <TextView
         android:id="@+id/retire_age_text"
@@ -27,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:textStyle="bold"
-        android:layout_below="@id/current_age_text"
+        android:layout_below="@id/view_current"
         android:text="Retirement age"
         android:textSize="20sp"
 
@@ -38,15 +51,22 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/retire_age_text"
         android:layout_alignRight="@id/retire_age_text"
-        android:layout_below="@id/current_age_text"
+        android:layout_below="@id/view_current"
         android:hint="age" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/retire_age_text"
+        android:id="@+id/view_retire"
+        />
 
     <TextView
         android:id="@+id/life_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_below="@id/retire_age_text"
+        android:layout_below="@id/view_retire"
         android:text="Life expectancy"
         android:layout_margin="5dp"
         android:textSize="20sp"
@@ -59,45 +79,16 @@
         android:layout_alignEnd="@id/life_text"
         android:layout_alignRight="@id/life_text"
         android:layout_below="@id/retire_age_text"
-        android:hint="age" />
+        android:hint="age"
+        android:id="@+id/editText" />
 
-    <TextView
-        android:id="@+id/interest_text"
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_below="@id/life_text"
-        android:layout_margin="5dp"
-        android:textStyle="bold"
-        android:text="LongTerm Interest(retirement)"
-        android:textSize="20sp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/interest_text"
-        android:layout_alignRight="@id/interest_text"
-        android:layout_below="@id/life_text"
-        android:hint="15%" />
-
-    <TextView
-        android:id="@+id/inflation_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Long term expected inflation"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_below="@id/interest_text"
-        android:layout_margin="5dp"
+        android:id="@+id/view_life"
         />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/inflation_text"
-        android:layout_alignRight="@id/inflation_text"
-        android:layout_below="@id/interest_text"
-        android:hint="12%"
-        android:id="@+id/editText5" />
 
     <TextView
         android:id="@+id/monthlyWith_text"
@@ -105,8 +96,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:textStyle="bold"
-        android:layout_below="@id/inflation_text"
-        android:text="Monthly Withdrawal(Retirement)"
+        android:layout_below="@id/view_life"
+        android:text="Monthly Withdrawal\n(Retirement)"
         android:textSize="20sp"
 
         />
@@ -114,42 +105,28 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/monthlyWith_text"
-        android:layout_alignRight="@id/monthlyWith_text"
-        android:layout_below="@id/inflation_text"
         android:hint="2000"
-        android:id="@+id/editText6" />
+        android:layout_below="@id/view_life"
+        android:layout_toStartOf="@+id/editText"
+        android:layout_toLeftOf="@id/monthlyWith_text"
+        android:layout_alignRight="@+id/monthlyWith_text"
+        android:layout_alignEnd="@+id/monthlyWith_text" />
 
-    <LinearLayout
-        android:id="@+id/button_linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/monthlyWith_text"
-        android:weightSum="2"
-        android:layout_margin="30dp"
-        android:orientation="horizontal">
 
-        <Button
+
+    <Button
             android:id="@+id/calculate_butt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/LumpBase_text"
-            android:layout_weight="1"
-           android:layout_margin="10dp"
+            android:layout_alignParentBottom="true"
+           android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+        android:layout_marginBottom="10dp"
             android:background="@color/primary_light"
             android:text="Calculate" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@color/primary_light"
-            android:text="Details"
 
-            />
 
-    </LinearLayout>
 
 
 

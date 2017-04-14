@@ -4,11 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-        <color name="background_color">#0d3e39</color>
+        <color name="background_color">#6cb9b2</color>
         <color name="heading">#3f766f</color>
         <color name="primary_light">#1ec2b1</color>
         <color name="float_message">#1fb381</color>
-        <color name="clicked">#1b9458</color>
+        <color name="clicked">#5cb689</color>
         <color name="enable">#0cda81</color>
         <color name="disable">#33a96a</color>
         <color name="primary_text">#312e2e</color>

@@ -4,47 +4,67 @@
     android:layout_height="match_parent">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tool_month_with"
+        />
     <TextView
         android:id="@+id/yearsRetire_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_linear"
-        android:layout_margin="5dp"
+        android:layout_below="@+id/tool_month_with"
+        android:layout_marginTop="10dp"
         android:text="Years to Retire"
+        android:layout_marginBottom="30dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/yearsRetire_text"
-        android:layout_alignRight="@id/yearsRetire_text"
-        android:layout_below="@id/button_linear"
-        android:hint="age" />
-
+        android:text="RESULT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/result_years"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/view_years"
+        android:layout_marginBottom="10dp"
+        />
 
     <TextView
         android:id="@+id/monthlyWith_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Monthly Withdrawal(retirement)"
+        android:layout_marginBottom="30dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_alignBaseline="@+id/editText8"
-        android:layout_alignBottom="@+id/editText8"
-        android:layout_alignRight="@+id/editText7"
-        android:layout_alignEnd="@+id/editText7" />
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="wrap_content"
+         />
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/monthlyWith_text"
-        android:layout_alignRight="@id/monthlyWith_text"
-        android:layout_below="@+id/yearsRetire_text"
-        android:hint="213" />
+        android:text="RESULT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/result_monthly_with"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/view_monthly_with"
+        android:layout_marginBottom="10dp"
+        />
 
 
     <TextView
@@ -52,41 +72,64 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/monthlyWith_text"
-        android:layout_margin="5dp"
         android:text="Quartely Withdrawal(Retirement)"
+        android:layout_marginBottom="30dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/QuaterlytWithAtPens"
-        android:layout_alignRight="@id/QuaterlytWithAtPens"
-        android:layout_below="@id/monthlyWith_text"
-        android:hint="50000"
-        android:id="@+id/editText" />
-
-
+        android:text="RESULT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/result_quarterly"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/view_quarterly"
+        android:layout_marginBottom="10dp"
+        />
 
     <TextView
         android:id="@+id/LumpsumAtPens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/QuaterlytWithAtPens"
-        android:layout_margin="5dp"
         android:text="Lumpsum Required(pension)"
+        android:layout_marginBottom="30dp"
         android:textSize="20sp"
         android:textStyle="bold" />
-    <EditText
-        android:id="@+id/withLump"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/monthlyWith_text"
-        android:layout_alignRight="@id/monthlyWith_text"
-        android:layout_below="@+id/QuaterlytWithAtPens"
-        android:hint="213000" />
+        android:text="RESULT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/result_lump_with"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/view_lump"
+        android:layout_marginBottom="10dp"
+        />
 
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/primary_light"
+        android:text="SAVE"
 
+        />
 
 </RelativeLayout>

@@ -2,16 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp">
+    >
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tool_month_with"
+        />
 
     <TextView
         android:id="@+id/current_age_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_below="@id/tool_month_with"
         android:text="current age"
         android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold" />
 
     <EditText
@@ -20,7 +24,16 @@
         android:layout_alignEnd="@id/current_age_text"
         android:layout_alignRight="@id/current_age_text"
         android:hint="age"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tool_month_with"
         android:id="@+id/editText3" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/view_current"
+        android:layout_below="@id/current_age_text"
+        android:layout_marginBottom="10dp"
+        />
 
     <TextView
         android:id="@+id/retire_age_text"
@@ -28,11 +41,9 @@
         android:layout_height="wrap_content"
         android:text="Retirement age"
         android:textSize="20sp"
-        android:layout_margin="5dp"
         android:textStyle="bold"
-        android:layout_below="@id/current_age_text"
-
-        />
+        android:layout_below="@+id/view_current"
+         />
 
 
     <EditText
@@ -40,15 +51,22 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/retire_age_text"
         android:layout_alignRight="@id/retire_age_text"
-        android:layout_below="@id/current_age_text"
+        android:layout_below="@id/view_current"
         android:hint="age"
         android:id="@+id/editText2" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/view_retire"
+        android:layout_below="@id/retire_age_text"
+        android:layout_marginBottom="10dp"
+        />
 
     <TextView
         android:id="@+id/life_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/retire_age_text"
+        android:layout_below="@id/view_retire"
         android:layout_margin="5dp"
         android:text="Life expectancy"
         android:textSize="20sp"
@@ -61,74 +79,50 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/life_text"
         android:layout_alignRight="@id/life_text"
-        android:layout_below="@id/retire_age_text"
-        android:hint="age" />
+        android:layout_below="@id/view_retire"
+        android:hint="age"
+        android:id="@+id/editText4" />
 
-    <TextView
-        android:id="@+id/interest_text"
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="10dp"
+        android:id="@+id/view_life"
         android:layout_below="@id/life_text"
-        android:layout_margin="5dp"
-        android:text="LongTerm Interest(retirement)"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/interest_text"
-        android:layout_alignRight="@id/interest_text"
-        android:layout_below="@id/life_text"
-        android:hint="15%" />
-
-    <TextView
-        android:id="@+id/inflation_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/interest_text"
-        android:layout_margin="5dp"
-        android:text="Long term expected inflation"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/inflation_text"
-        android:layout_alignRight="@id/inflation_text"
-        android:layout_below="@id/interest_text"
-        android:hint="12%" />
-
-
+        android:layout_marginBottom="10dp"
+        />
     <TextView
         android:id="@+id/lumpsumWith_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/inflation_text"
-        android:layout_margin="5dp"
-        android:text="Lumpsum Withdrawal(retirement)"
+        android:text="Lumpsum Withdrawal\n(retirement)"
         android:textSize="20sp"
         android:textStyle="bold"
-
+        android:layout_below="@id/view_life"
         />
 
     <EditText
         android:id="@+id/editText6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="2000"
+        android:layout_below="@id/view_life"
+       android:layout_alignRight="@id/lumpsumWith_text"
         android:layout_alignEnd="@id/lumpsumWith_text"
-        android:layout_alignRight="@id/lumpsumWith_text"
-        android:layout_below="@id/inflation_text"
-        android:hint="2000" />
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/view_lump"
+        android:layout_below="@id/lumpsumWith_text"
+        android:layout_marginBottom="10dp"
+        />
 
     <TextView
         android:id="@+id/amount_deposit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lumpsumWith_text"
+        android:layout_below="@id/view_lump"
         android:layout_margin="5dp"
         android:text="Amount Deposited"
         android:textSize="20sp"
@@ -141,14 +135,21 @@
         android:layout_alignEnd="@id/amount_deposit_text"
         android:layout_alignRight="@id/amount_deposit_text"
         android:layout_below="@id/lumpsumWith_text"
-        android:hint="1000" />
+        android:hint="1000"
+        android:id="@+id/editText5" />
 
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/view_amount"
+        android:layout_below="@id/amount_deposit_text"
+        android:layout_marginBottom="10dp"
+        />
     <TextView
         android:id="@+id/amountHeirs_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/amount_deposit_text"
+        android:layout_below="@id/view_amount"
         android:layout_margin="5dp"
         android:text="Amount bequeath to heirs"
         android:textSize="20sp"
@@ -166,34 +167,21 @@
         android:hint="7000" />
 
 
-    <LinearLayout
-        android:id="@+id/button_linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/amountHeirs_text"
-        android:orientation="horizontal"
-        android:weightSum="2">
+
 
         <Button
             android:id="@+id/calculate_butt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentBottom="true"
             android:background="@color/primary_light"
             android:text="Calculate" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
-            android:background="@color/primary_light"
-            android:text="Details"
 
-            />
 
-    </LinearLayout>
 
 
 </RelativeLayout>

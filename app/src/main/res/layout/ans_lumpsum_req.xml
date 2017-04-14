@@ -3,25 +3,45 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/yearsRetire_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_linear"
+        android:orientation="vertical"
+        >
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tool_lump"
+        />
+
+
+    <TextView
+        android:id="@+id/lifespan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_lump"
         android:text="lifeSpan after Retirement"
+        android:layout_marginBottom="30dp"
         android:textStyle="bold"
         android:layout_margin="10dp"
         android:textSize="20sp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/yearsRetire_text"
-        android:layout_alignRight="@id/yearsRetire_text"
-        android:layout_below="@id/button_linear"
-        android:hint="15"
-        android:id="@+id/editText7" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_linear"
+        android:text="RESULT"
+        android:textStyle="bold"
+        android:id="@+id/life_result"
+        android:textSize="20sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/ans_viewtwo"
+        android:layout_marginBottom="10dp"
+        />
     <TextView
         android:id="@+id/lumpsumDep"
         android:layout_width="match_parent"
@@ -29,41 +49,67 @@
         android:text="Lump Sum Required"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:layout_margin="5dp"
+       android:layout_marginBottom="20dp"
         android:layout_below="@+id/yearsRetire_text"
         android:layout_alignRight="@+id/editText7"
         android:layout_alignEnd="@+id/editText7" />
 
-
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="300000"
-        android:layout_below="@+id/yearsRetire_text"
-        android:layout_alignEnd="@id/lumpsumDep"
-        android:layout_alignRight="@id/lumpsumDep"
-        android:id="@+id/editText8" />
+        android:layout_below="@id/button_linear"
+        android:text="RESULT"
+        android:textStyle="bold"
+        android:id="@+id/lump_result"
+        android:textSize="20sp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/lump_view_two"
+        android:layout_marginBottom="20dp"
+        />
 
     <TextView
         android:id="@+id/QuaterlytWithAtPens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lumpsumDep"
-        android:layout_margin="5dp"
+      android:layout_marginBottom="20dp"
         android:textStyle="bold"
         android:text="Quartely Withdrawal(Retirement)"
         android:textSize="20sp" />
 
-
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/QuaterlytWithAtPens"
-        android:layout_alignRight="@id/QuaterlytWithAtPens"
-        android:layout_below="@id/lumpsumDep"
-        android:hint="50000" />
+        android:layout_below="@id/button_linear"
+        android:text="RESULT"
+        android:textStyle="bold"
+        android:id="@+id/resultquart"
+        android:textSize="20sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/lump_view_three"
+        android:layout_marginBottom="20dp"
+        />
 
+</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/primary_light"
+        android:text="SAVE"
 
-
-
+        />
 </RelativeLayout>

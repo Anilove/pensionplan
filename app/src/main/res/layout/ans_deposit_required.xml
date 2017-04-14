@@ -1,84 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tool"
+        />
 
     <TextView
         android:id="@+id/yearsRetire_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_linear"
-        android:layout_margin="5dp"
+       android:layout_below="@id/ans_view"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
         android:textStyle="bold"
         android:text="Years to Retire"
         android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/result_textone"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/yearsRetire_text"
-        android:layout_alignRight="@id/yearsRetire_text"
-        android:layout_below="@id/button_linear"
-        android:hint="age" />
+        android:textStyle="bold"
+        android:text="Result"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/ans_viewtwo"
+        android:layout_marginBottom="20dp"
+        />
 
     <TextView
         android:id="@+id/montlyDep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/yearsRetire_text"
-        android:layout_margin="5dp"
-        android:textStyle="bold"
+        android:layout_below="@+id/ans_viewtwo"
         android:text="Monthly Deposit Required"
+        android:layout_marginBottom="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/result_texttwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Result"
         android:textSize="20sp" />
 
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/montlyDep"
-        android:layout_alignRight="@id/montlyDep"
-        android:layout_below="@+id/yearsRetire_text"
-        android:hint="80" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/ans_viewthree"
+        android:layout_below="@id/tool"
+        android:layout_marginBottom="10dp"
+        />
 
     <TextView
         android:id="@+id/LumpsumAtPens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/montlyDep"
-        android:layout_margin="5dp"
+        android:layout_below="@+id/montlyDep"
+      android:layout_marginBottom="20dp"
         android:textStyle="bold"
         android:text="Lumpsum Required at pension"
         android:textSize="20sp" />
-
-
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/result_textthree"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/LumpsumAtPens"
-        android:layout_alignRight="@id/LumpsumAtPens"
-        android:layout_below="@id/montlyDep"
-        android:hint="1000" />
+        android:textStyle="bold"
+        android:text="Result"
+        android:textSize="20sp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/ans_viewfour"
+        android:layout_below="@id/tool"
+        android:layout_marginBottom="10dp"
+        />
     <TextView
         android:id="@+id/QuaterlytWithAtPens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/LumpsumAtPens"
-        android:layout_margin="5dp"
+        android:layout_marginBottom="20dp"
         android:textStyle="bold"
-        android:text="Quartely Withdrawal(Retirement)"
+        android:text="Quartely Withdrawal (Retirement)"
         android:textSize="20sp" />
 
-
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/result_textfour"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/QuaterlytWithAtPens"
-        android:layout_alignRight="@id/QuaterlytWithAtPens"
-        android:layout_below="@id/LumpsumAtPens"
-        android:hint="50000" />
+        android:textStyle="bold"
+        android:text="Result"
+        android:textSize="20sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_color"
+        android:id="@+id/ans_view"
+        android:layout_below="@id/tool"
+        android:layout_marginBottom="50dp"
+        />
+</LinearLayout>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/primary_light"
+        android:text="SAVE"
+
+        />
 
 
 </RelativeLayout>

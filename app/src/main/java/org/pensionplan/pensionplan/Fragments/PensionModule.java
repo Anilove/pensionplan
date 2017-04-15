@@ -14,11 +14,8 @@ public class PensionModule {
     public static double interest = 0.15;
     public static double annualIncrease = 0.12;
     public static double annualInterest = 0.22;
-    public static double annualIncMonthly = 0.12;
-    public static double compoundedTimes = 0.25;
-    //public static double BeginningValue;
+    public static double McompoundedTimes = 0.25;
 
-    // public static double withdrawal;
 
 
     // Life span after retirement
@@ -62,7 +59,7 @@ public class PensionModule {
     // Beginning
 
     public static double getBeginning(double amountToHeir, int currentAge, int retirementAge, double amountWithdrawal, double interest, double compoundedTimes) {
-        double Beginning = getPrewithdrawal(amountToHeir, currentAge, retirementAge, amountWithdrawal) / (1 + (interest * compoundedTimes));
+        double Beginning = getPrewithdrawal(amountToHeir, currentAge, retirementAge, amountWithdrawal) / (1 + (interest * McompoundedTimes));
         return Beginning;
 
     }
@@ -73,7 +70,7 @@ public class PensionModule {
         double finalResultTwo, NewPrewithdrawal, withdrawal;
 
 
-        double BeginningValue = getBeginning(amountToHeir, currentAge, RETIREMENT_AGE, amountWithdrawal, interest, compoundedTimes);
+        double BeginningValue = getBeginning(amountToHeir, currentAge, RETIREMENT_AGE, amountWithdrawal, interest, McompoundedTimes);
 
         double lifespan = getLifespan();
 
@@ -96,7 +93,7 @@ public class PensionModule {
                 finalResult = BeginningValue;
 
                 NewPrewithdrawal = finalResult + withdrawal;
-                finalResultTwo = NewPrewithdrawal / (1 + (interest * compoundedTimes));
+                finalResultTwo = NewPrewithdrawal / (1 + (interest * McompoundedTimes));
 
                 currentWith = withdrawal;
                 BeginningValue = finalResultTwo;
@@ -105,14 +102,14 @@ public class PensionModule {
                 withdrawal = currentWith;
                 finalResult = BeginningValue;
                 NewPrewithdrawal = finalResult + withdrawal;
-                finalResultTwo = NewPrewithdrawal / (1 + (interest * compoundedTimes));
+                finalResultTwo = NewPrewithdrawal / (1 + (interest * McompoundedTimes));
                 System.out.println("Beginning value = " + BeginningValue);
                 currentWith = withdrawal;
                 BeginningValue = finalResultTwo;
 
             }
 
-            lifespan -= compoundedTimes;
+            lifespan -= McompoundedTimes;
 
 
         }

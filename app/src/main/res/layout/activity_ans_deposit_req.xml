@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.pensionplan.pensionplan.AnsDepositReq">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/yearsRetire_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:text="Years to Retire"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/result_textone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Result"
+            android:padding="5dp"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_color"
+            android:id="@+id/ans_viewtwo"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/montlyDep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ans_viewtwo"
+            android:padding="5dp"
+            android:text="Monthly Deposit Required"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/result_texttwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="Result"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_color"
+            android:id="@+id/ans_viewthree"
+            android:layout_below="@id/result_texttwo"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/LumpsumAtPens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/montlyDep"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:text="Lumpsum Required at pension"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/result_textthree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="Result"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_color"
+            android:id="@+id/ans_viewfour"
+            android:layout_below="@id/result_textthree"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:id="@+id/QuaterlytWithAtPens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LumpsumAtPens"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="Quartely Withdrawal (Retirement)"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/result_textfour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="Result"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="298dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/primary_light"
+        android:text="SAVE"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
+
+
+
+</RelativeLayout>

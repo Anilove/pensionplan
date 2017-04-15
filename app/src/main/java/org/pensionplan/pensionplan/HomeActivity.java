@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.pensionplan.pensionplan.Fragments.FragMonthlyWithdraw;
 import org.pensionplan.pensionplan.Fragments.FragmentDepRequired;
 import org.pensionplan.pensionplan.Fragments.FragmentLumpsumReq;
 import org.pensionplan.pensionplan.Fragments.FragmentLumpsumWithdrawal;
@@ -52,26 +53,32 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
 
+
                 if (item.getItemId() == R.id.menu_monthly_dep) {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_home, new FragmentDepRequired());
                     fragmentTransaction.commit();
+                    getSupportActionBar().setTitle("REGULAR DEPOSIT REQUIRED");
                 } else if (item.getItemId() == R.id.menu_lumpsum_dep) {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_home, new FragmentLumpsumReq());
                     fragmentTransaction.commit();
+                    getSupportActionBar().setTitle("LUMP SUM REQUIRED");
                 } else if (item.getItemId() == R.id.menu_lumpsum_withdrawal) {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_home, new FragmentLumpsumWithdrawal());
                     fragmentTransaction.commit();
-                } else if (item.getItemId() == R.id.menu_lumpsum_withdrawal) {
+                    getSupportActionBar().setTitle("LUMP SUM WITHDRAWAL");
+                } else if (item.getItemId() == R.id.menu_monthly_withdrawal) {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_home, new FragmentLumpsumWithdrawal());
+                    fragmentTransaction.replace(R.id.frame_home, new FragMonthlyWithdraw());
                     fragmentTransaction.commit();
+                    getSupportActionBar().setTitle("MONTHLY WITHDRAWAL");
                 } else if (item.getItemId() == R.id.menu_trustee_list) {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_home, new FragmentTrusteeList());
                     fragmentTransaction.commit();
+                    getSupportActionBar().setTitle("LIST OF TRUSTEE");
                 }
                 else {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

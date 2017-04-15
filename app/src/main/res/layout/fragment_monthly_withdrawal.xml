@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tool_month_with"
         android:text="current age"
+        android:padding="10dp"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:textStyle="bold" />
@@ -24,6 +25,7 @@
         android:layout_alignEnd="@id/current_age_text"
         android:layout_alignRight="@id/current_age_text"
         android:hint="age"
+        android:padding="20dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/tool_month_with"
         android:id="@+id/editText3" />
@@ -40,6 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Retirement age"
+        android:padding="10dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_below="@+id/view_current"
@@ -53,6 +56,7 @@
         android:layout_alignRight="@id/retire_age_text"
         android:layout_below="@id/view_current"
         android:hint="age"
+        android:padding="20dp"
         android:id="@+id/editText2" />
     <View
         android:layout_width="match_parent"
@@ -69,6 +73,7 @@
         android:layout_below="@id/view_retire"
         android:layout_margin="5dp"
         android:text="Life expectancy"
+        android:padding="10dp"
         android:textSize="20sp"
         android:textStyle="bold"
 
@@ -81,6 +86,7 @@
         android:layout_alignRight="@id/life_text"
         android:layout_below="@id/view_retire"
         android:hint="age"
+        android:padding="20dp"
         android:id="@+id/editText4" />
 
 
@@ -97,6 +103,7 @@
         android:layout_height="wrap_content"
         android:text="Lumpsum Withdrawal\n(retirement)"
         android:textSize="20sp"
+        android:padding="10dp"
         android:textStyle="bold"
         android:layout_below="@id/view_life"
         />
@@ -106,6 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="2000"
+        android:padding="20dp"
         android:layout_below="@id/view_life"
        android:layout_alignRight="@id/lumpsumWith_text"
         android:layout_alignEnd="@id/lumpsumWith_text"
@@ -124,6 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/view_lump"
         android:layout_margin="5dp"
+        android:padding="10dp"
         android:text="Amount Deposited"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -132,6 +141,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:layout_alignEnd="@id/amount_deposit_text"
         android:layout_alignRight="@id/amount_deposit_text"
         android:layout_below="@id/lumpsumWith_text"
@@ -151,6 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/view_amount"
         android:layout_margin="5dp"
+        android:padding="10dp"
         android:text="Amount bequeath to heirs"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -161,6 +172,7 @@
         android:id="@+id/editText11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:layout_alignEnd="@id/amount_deposit_text"
         android:layout_alignRight="@id/amountHeirs_text"
         android:layout_below="@id/amount_deposit_text"

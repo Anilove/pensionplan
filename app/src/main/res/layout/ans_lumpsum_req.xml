@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tool_lump"
+        android:padding="5dp"
         android:text="lifeSpan after Retirement"
         android:layout_marginBottom="30dp"
         android:textStyle="bold"
@@ -29,8 +30,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/life_text"
+        android:layout_below="@id/lifespan"
         android:text="RESULT"
+        android:padding="5dp"
         android:textStyle="bold"
         android:id="@+id/life_result"
         android:textSize="20sp"
@@ -49,16 +51,16 @@
         android:text="Lump Sum Required"
         android:textStyle="bold"
         android:textSize="20sp"
+        android:padding="5dp"
        android:layout_marginBottom="20dp"
-        android:layout_below="@+id/yearsRetire_text"
-        android:layout_alignRight="@+id/editText7"
-        android:layout_alignEnd="@+id/editText7" />
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ans_viewtwo"
         android:text="RESULT"
+        android:padding="5dp"
         android:textStyle="bold"
         android:id="@+id/lump_result"
         android:textSize="20sp"
@@ -79,6 +81,7 @@
         android:layout_below="@id/lumpsumDep"
       android:layout_marginBottom="20dp"
         android:textStyle="bold"
+        android:padding="5dp"
         android:text="Quartely Withdrawal(Retirement)"
         android:textSize="20sp" />
 
@@ -87,6 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/lump_view_two"
         android:text="RESULT"
+        android:padding="5dp"
         android:textStyle="bold"
         android:id="@+id/resultquart"
         android:textSize="20sp"

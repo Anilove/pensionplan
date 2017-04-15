@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/heading</item>
         <item name="colorPrimaryDark">@color/accent_material_light</item>
         <item name="colorAccent">@color/float_message</item>
+        <item name="android:colorControlNormal">@color/icons</item>
+        <item name="android:textColorPrimary">@color/icons</item> // I don't want to set this, changes everywhere.
+        <item name="android:textColorSecondary">@color/icons</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

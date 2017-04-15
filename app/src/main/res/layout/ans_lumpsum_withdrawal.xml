@@ -21,9 +21,9 @@
         android:layout_below="@id/lump_with"
         android:text="Years to Retire"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp"
         android:textStyle="bold"
-
         android:textSize="20sp" />
 
 
@@ -32,6 +32,7 @@
       android:layout_height="wrap_content"
       android:text="RESULT"
       android:textSize="20sp"
+      android:padding="5dp"
       android:textStyle="bold"
       android:id="@+id/result_lump_with"
       />
@@ -50,8 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/yearsRetire_text"
         android:textStyle="bold"
+        android:padding="5dp"
         android:text="Lumpsum withdrawal(pension)"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:textSize="20sp" />
 
 
@@ -59,6 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RESULT"
+        android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/eresult_with"
@@ -76,7 +79,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/LumpsumAtPens"
         android:textStyle="bold"
-        android:layout_marginBottom="30dp"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp"
         android:text="Quartely Withdrawal(Retirement)"
         android:textSize="20sp" />
 
@@ -85,6 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RESULT"
+        android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/editText7"

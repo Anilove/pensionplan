@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="current age"
+        android:padding="10dp"
         android:layout_below="@id/tool_month_with"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
@@ -23,13 +24,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:padding="20dp"
         android:layout_below="@id/tool_month_with"
         android:layout_alignEnd="@id/current_age_text"
         android:layout_alignRight="@id/current_age_text"
         android:hint="age" />
     <View
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="15dp"
         android:layout_below="@id/current_age_text"
         android:id="@+id/view_current"
         />
@@ -40,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:textStyle="bold"
+        android:padding="10dp"
         android:layout_below="@id/view_current"
         android:text="Retirement age"
         android:textSize="20sp"
@@ -50,12 +53,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/retire_age_text"
+        android:padding="30dp"
         android:layout_alignRight="@id/retire_age_text"
         android:layout_below="@id/view_current"
         android:hint="age" />
     <View
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="15dp"
         android:layout_below="@id/retire_age_text"
         android:id="@+id/view_retire"
         />
@@ -66,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/view_retire"
         android:text="Life expectancy"
+        android:padding="10dp"
         android:layout_margin="5dp"
         android:textStyle="bold"
         android:textSize="20sp"
@@ -78,11 +83,12 @@
         android:layout_alignEnd="@id/life_text"
         android:layout_alignRight="@id/life_text"
         android:layout_below="@id/view_retire"
+        android:padding="20dp"
         android:hint="age" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="15dp"
         android:layout_below="@id/life_text"
         android:id="@+id/view_life"
         />
@@ -92,6 +98,7 @@
         android:layout_height="wrap_content"
         android:text="Amount Deposited"
         android:layout_margin="5dp"
+        android:padding="10dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_below="@+id/view_life"
@@ -103,21 +110,23 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@id/monthlyDep_text"
         android:layout_alignEnd="@id/monthlyDep_text"
+        android:padding="20dp"
         android:layout_below="@id/view_life"
         android:hint="5000" />
     <View
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="15dp"
         android:layout_below="@id/monthlyDep_text"
         android:id="@+id/view_monthly"
         />
 
     <TextView
-        android:id="@+id/montlyWith"
+        android:id="@+id/monthlyWith"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/view_monthly"
-        android:text="Monthly Withdrawal(retirement)"
+        android:text="Monthly Withdrawal\n(retirement)"
+        android:padding="10dp"
         android:layout_margin="5dp"
         android:textStyle="bold"
         android:textSize="20sp" />
@@ -128,13 +137,34 @@
         android:layout_height="wrap_content"
         android:hint="1000"
         android:layout_below="@id/view_monthly"
-        android:layout_alignRight="@id/montlyWith"
-        android:layout_alignEnd="@id/montlyWith"
+        android:layout_alignRight="@id/monthlyWith"
+        android:padding="20dp"
+        android:layout_alignEnd="@id/monthlyWith"
         android:id="@+id/editText9"
         />
 
+    <TextView
+        android:id="@+id/compounded_times"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monthlyWith"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="compounded Times \nin a year"
+        android:textSize="20sp" />
 
-        <Button
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="4"
+        android:padding="30dp"
+        android:layout_below="@+id/monthlyWith"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
             android:id="@+id/calculate_butt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

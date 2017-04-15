@@ -18,10 +18,11 @@
         android:id="@+id/yearsRetire_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:layout_below="@+id/tool_month_with"
         android:layout_marginTop="10dp"
         android:text="Years to Retire"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:text="RESULT"
         android:textSize="20sp"
+        android:padding="5dp"
         android:textStyle="bold"
         android:id="@+id/result_years"
         />
@@ -46,7 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Monthly Withdrawal(retirement)"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold"
          />
@@ -54,6 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RESULT"
+        android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/result_monthly_with"
@@ -73,7 +77,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/monthlyWith_text"
         android:text="Quartely Withdrawal(Retirement)"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -81,6 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RESULT"
+        android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/result_quarterly"
@@ -90,7 +96,7 @@
         android:layout_height="10dp"
         android:background="@color/background_color"
         android:id="@+id/view_quarterly"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         />
 
     <TextView
@@ -98,8 +104,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/QuaterlytWithAtPens"
-        android:text="Lumpsum Required(pension)"
-        android:layout_marginBottom="30dp"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp"
+        android:text="Lumpsum At Pension"
         android:textSize="20sp"
         android:textStyle="bold" />
     <TextView
@@ -108,6 +115,7 @@
         android:text="RESULT"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:padding="5dp"
         android:id="@+id/result_lump_with"
         />
     <View

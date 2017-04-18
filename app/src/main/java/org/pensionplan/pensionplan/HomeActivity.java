@@ -111,6 +111,6 @@ public class HomeActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        navigationView.getMenu().performIdentifierAction(R.id.menu_monthly_withdrawal, 0);
+        navigationView.getMenu().performIdentifierAction(R.id.menu_monthly_dep, 0);
     }
 }

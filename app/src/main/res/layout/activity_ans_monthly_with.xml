@@ -52,7 +52,7 @@
             android:layout_below="@id/yearsRetire_text"
             android:textStyle="bold"
             android:padding="5dp"
-            android:text="Monthly withdrawal(pension)"
+            android:text="Monthly withdrawal(retirement)"
             android:layout_marginBottom="20dp"
             android:textSize="20sp" />
 
@@ -81,7 +81,7 @@
             android:textStyle="bold"
             android:padding="5dp"
             android:layout_marginBottom="20dp"
-            android:text="Quartely Withdrawal(Retirement)"
+            android:text="Lumpsum Withdrawal(Retirement)"
             android:textSize="20sp" />
 
 

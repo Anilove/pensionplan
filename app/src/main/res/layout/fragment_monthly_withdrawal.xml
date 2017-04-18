@@ -28,7 +28,7 @@
         android:padding="20dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/tool_month_with"
-        android:id="@+id/editText3" />
+        android:id="@+id/edit_current" />
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
@@ -57,7 +57,7 @@
         android:layout_below="@id/view_current"
         android:hint="age"
         android:padding="20dp"
-        android:id="@+id/editText2" />
+        android:id="@+id/edit_retire" />
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
@@ -87,7 +87,7 @@
         android:layout_below="@id/view_retire"
         android:hint="age"
         android:padding="20dp"
-        android:id="@+id/editText4" />
+        android:id="@+id/edit_life" />
 
 
     <View
@@ -109,7 +109,7 @@
         />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/edit_lump"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="2000"
@@ -146,7 +146,7 @@
         android:layout_alignRight="@id/amount_deposit_text"
         android:layout_below="@id/lumpsumWith_text"
         android:hint="1000"
-        android:id="@+id/editText5" />
+        android:id="@+id/edit_amount" />
 
     <View
         android:layout_width="match_parent"
@@ -169,7 +169,7 @@
         />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/edit_amount_heir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
@@ -182,7 +182,7 @@
 
 
         <Button
-            android:id="@+id/calculate_butt"
+            android:id="@+id/calculate_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="60dp"

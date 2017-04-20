@@ -2,6 +2,7 @@ package org.pensionplan.pensionplan.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.Double2;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -14,6 +15,7 @@ import android.widget.EditText;
 
 import org.pensionplan.pensionplan.AnsDepositReq;
 import org.pensionplan.pensionplan.R;
+import org.pensionplan.pensionplan.utilities.PensionModule;
 
 /**
  * Created by owner on 1/31/2017.
@@ -35,43 +37,22 @@ public class FragmentDepRequired extends Fragment {
         View view = inflater.inflate(R.layout.fragment_deposit_required, container, false);
 
         EditText editText = (EditText) view.findViewById(R.id.edit_current);
-        //EditText editTextOne = (EditText) view.findViewById(R.id.edit_life);
+        EditText editTextOne = (EditText) view.findViewById(R.id.edit_life);
         EditText editTextTwo = (EditText) view.findViewById(R.id.edit_retire);
         EditText editTextThree = (EditText) view.findViewById(R.id.edit_monthly);
         EditText editTextFour = (EditText) view.findViewById(R.id.edit_amount);
         EditText editTextFive = (EditText) view.findViewById(R.id.edit_compounded);
        Button button = (Button) view.findViewById(R.id.calculate_button);
 
-        String currentValue = editText.getText().toString();
-        //int life =  editTextOne.getInputType();
-        String retireValue = editTextTwo.getText().toString();
-        String monthlyValue = editTextThree.getText().toString();
-        String amountToHeirValue = editTextFour.getText().toString();
-        String compoundedValue = editTextFive.getText().toString();
+        int currentValue = Integer.parseInt(editText.getText().toString());
+        int life =   Integer.parseInt(editTextOne.getText().toString());
+        int retireValue =  Integer.parseInt(editTextTwo.getText().toString());
+        double monthlyValue =  Double.parseDouble(editTextThree.getText().toString());
+        double amountToHeirValue =  Double.parseDouble(editTextFour.getText().toString());
+        double compoundedValue =  Double.parseDouble(editTextFive.getText().toString());
 
-        if (!currentValue.equals("") && (!retireValue.equals("") && (!monthlyValue.equals("")
-                        && (amountToHeirValue.equals("") && (!compoundedValue.equals(""))))))
-        {
-            int current = Integer.parseInt(currentValue);
-            int retire = Integer.parseInt(currentValue);
-            double monthly = Double.parseDouble(monthlyValue);
-            double amountToHeir = Double.parseDouble(amountToHeirValue);
-            double compounded = Double.parseDouble(compoundedValue);
 
-            PensionModule.getLifespan();
-            PensionModule.getEndValue(amountToHeir, current);
-            quartResult = PensionModule.getQuarterly(monthly,current, (int) inflation,retire);
-            PensionModule.getWithdrawal(annualIncrease,retire,inflation,monthly,current);
-            PensionModule.getPrewithdrawal(amountToHeir,current,retire,monthly);
-            PensionModule.getBeginning(amountToHeir,current ,retire,monthly, interest, McompoundedTimes);
-            calculatetResult = PensionModule.calculate(amountToHeir, current, monthly);
-            PensionModule.getImpliedInterest(annualInterest,compounded);
-            PensionModule.getImpliedGrowth(annualInterest,compounded);
-            PensionModule.getRresult(compounded);
-            PensionModule.getNresult(compounded,current);
-            PensionModule.getGresult(compounded);
-            monthlyDepResult =PensionModule.getMonthlyDep(compounded,current,amountToHeir, monthly);
-        }
+
 
 
 

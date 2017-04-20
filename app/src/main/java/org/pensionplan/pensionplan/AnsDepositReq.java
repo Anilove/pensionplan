@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import org.pensionplan.pensionplan.utilities.PensionModule;
+
 public class AnsDepositReq extends AppCompatActivity {
 
     @Override
@@ -26,5 +28,8 @@ public class AnsDepositReq extends AppCompatActivity {
         textViewTwo.setText(String.valueOf(quart));
         textViewThree.setText(String.valueOf(calculate));
         textViewFour.setText(String.valueOf(monthly));
+
+        // How to call pension moudule
+        PensionModule pensionModule = new PensionModule(23, 60, 80, 2000, 30000, 4);
     }
 }

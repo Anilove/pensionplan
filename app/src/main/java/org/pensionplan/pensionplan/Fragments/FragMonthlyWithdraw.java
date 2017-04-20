@@ -50,4 +50,10 @@ public class FragMonthlyWithdraw extends Fragment {
         });
         return view;
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("MONTHLY WITHDRAWAL");
+    }
 }

@@ -1,5 +1,7 @@
 package org.pensionplan.pensionplan.utilities;
 
+import android.support.v4.app.FragmentActivity;
+
 public class PensionModule {
 
 	// Static fields
@@ -28,7 +30,7 @@ public class PensionModule {
 	private double lumpSumWithdrawal;
 
 	// Null constructor
-	public PensionModule() {
+	public PensionModule(FragmentActivity activity) {
 
 	}
 
@@ -63,8 +65,8 @@ public class PensionModule {
 	}
 	
 	// Quarterly contribution
-	public double getQuarterly(){
-		double quarterly = 1 + PensionModule.inflation;
+	public double getQuarterly(int currentAge, int retirementAge){
+		double quarterly = 1 + inflation;
 		int planningPeriod = retirementAge -  currentAge;
 		double quarterlyPower = Math.pow(quarterly, planningPeriod);
 		return quarterlyPower * monthlyWithdrawal * 3;
@@ -77,7 +79,7 @@ public class PensionModule {
 		double annualAdd = 1 + annualIncrease;
 		int lifespan =(LIFE_EXPECTANCE -RETIREMENT_AGE);
 		int lifespanSub =lifespan-1;
-		return (Math.pow(annualAdd,lifespanSub)) * getQuarterly();
+		return (Math.pow(annualAdd,lifespanSub)) * getQuarterly(currentAge, retirementAge);
 
 
 	}
@@ -217,8 +219,5 @@ public class PensionModule {
 	public double getLumpSumWithdrawal() {
 		return lumpSumWithdrawal;
 	}
-
-	
-
 
 }

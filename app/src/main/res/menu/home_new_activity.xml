@@ -4,19 +4,19 @@
         <item
             android:id="@+id/menu_monthly_dep"
             android:icon="@drawable/wallet_with_bill"
-            android:title="Deposit Required" />
+            android:title="REGULAR DEPOSIT REQUIRED" />
         <item
             android:id="@+id/menu_lumpsum_dep"
             android:icon="@drawable/dollar_bill_paper"
-            android:title="Lumpsum Required" />
+            android:title="LUMP SUM REQUIRED" />
         <item
             android:id="@+id/menu_monthly_withdrawal"
             android:icon="@drawable/bitcoin_withdraw_symbol"
-            android:title="Expected Monthly withdrawal" />
+            android:title="MONTHLY WITHDRAWAL" />
         <item
             android:id="@+id/menu_lumpsum_withdrawal"
             android:icon="@drawable/withdrawing_money"
-            android:title="Expected Lumpsum Withdrawal" />
+            android:title="LUMP SUM WITHDRAWAL" />
         <item
             android:id="@+id/menu_trustee_list"
             android:icon="@drawable/list"

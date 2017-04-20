@@ -1,7 +1,10 @@
 package org.pensionplan.pensionplan;
 
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,99 +21,79 @@ import org.pensionplan.pensionplan.Fragments.FragmentTrusteeList;
 
 import io.realm.Realm;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activity);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_layout);
         setSupportActionBar(toolbar);
 
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame_home, new FragmentDepRequired());
+        fragmentTransaction.commit();
 
-        //REALM DATABASE
-/*
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_layout);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+
+        /*REALM DATABASE
+
         Realm realm = Realm.getDefaultInstance();
        // realm.where(User.class).findFirst();
 
         User user = realm.where(User.class).findFirst();
         User userpin = new User();
-        userpin.id = ;
+        //userpin.id ="" ;
         userpin.email = "editTextmail";
-        userpin.name = "editTextname";*/
+        userpin.name = "editTextname";
 
 
-      /* realm.beginTransaction();
+       realm.beginTransaction();
         realm.copyToRealmOrUpdate(user);
         realm.commitTransaction();*/
+    }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        int id = item.getItemId();
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                drawerLayout.closeDrawers();
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
+        if (id == R.id.menu_monthly_dep) {
 
-                if (item.getItemId() == R.id.menu_monthly_dep) {
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_home, new FragmentDepRequired());
-                    fragmentTransaction.commit();
-                    getSupportActionBar().setTitle("REGULAR DEPOSIT REQUIRED");
-                } else if (item.getItemId() == R.id.menu_lumpsum_dep) {
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_home, new FragmentLumpsumReq());
-                    fragmentTransaction.commit();
-                    getSupportActionBar().setTitle("LUMP SUM REQUIRED");
-                } else if (item.getItemId() == R.id.menu_lumpsum_withdrawal) {
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_home, new FragmentLumpsumWithdrawal());
-                    fragmentTransaction.commit();
-                    getSupportActionBar().setTitle("LUMP SUM WITHDRAWAL");
-                } else if (item.getItemId() == R.id.menu_monthly_withdrawal) {
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_home, new FragMonthlyWithdraw());
-                    fragmentTransaction.commit();
-                    getSupportActionBar().setTitle("MONTHLY WITHDRAWAL");
-                } else if (item.getItemId() == R.id.menu_trustee_list) {
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_home, new FragmentTrusteeList());
-                    fragmentTransaction.commit();
-                    getSupportActionBar().setTitle("LIST OF TRUSTEE");
-                }
-                else {
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_home, new FragmentDepRequired());
-                    fragmentTransaction.commit();
-                }
+            fragmentManager.beginTransaction().replace(R.id.frame_home, new FragmentDepRequired()).commit();
 
-                return false;
-            }
+        } else if (id == R.id.menu_lumpsum_dep) {
 
-        });
+            fragmentManager.beginTransaction().replace(R.id.frame_home, new FragmentLumpsumReq()).commit();
 
-        // Initializing Drawer Layout and ActionBarToggle
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close){
+        } else if (id == R.id.menu_lumpsum_withdrawal) {
 
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                // Code here will be triggered once the drawer closes as we dont want anything to happen so we leave this blank
-                super.onDrawerClosed(drawerView);
-            }
+            fragmentManager.beginTransaction().replace(R.id.frame_home, new FragmentLumpsumWithdrawal()).commit();
 
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                // Code here will be triggered once the drawer open as we dont want anything to happen so we leave this blank
+        } else if (id == R.id.menu_monthly_withdrawal) {
 
-                super.onDrawerOpened(drawerView);
-            }
-        };
+            fragmentManager.beginTransaction().replace(R.id.frame_home, new FragMonthlyWithdraw()).commit();
 
-        drawerLayout.setDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
+        } else if (id == R.id.menu_trustee_list) {
 
-        navigationView.getMenu().performIdentifierAction(R.id.menu_monthly_dep, 0);
+            fragmentManager.beginTransaction().replace(R.id.frame_home, new FragmentTrusteeList()).commit();
+        }
+
+        DrawerLayout drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+        return true;
     }
 }

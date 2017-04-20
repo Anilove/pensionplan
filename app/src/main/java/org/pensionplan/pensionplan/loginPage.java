@@ -26,13 +26,12 @@ public class loginPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String pin = Pin.getText().toString();
-
-                if(pin.length() <4){
+                if(Pin.getText().toString().length() <4){
                     Toast.makeText(loginPage.this,"Please enter 4 digit pin", Toast.LENGTH_LONG).show();
                 }
 
                 else{
+                    Pin.setText("");
                     startActivity(new Intent(loginPage.this, HomeActivity.class));
                 }
             }

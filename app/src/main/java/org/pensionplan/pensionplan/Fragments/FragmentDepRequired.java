@@ -30,43 +30,35 @@ public class FragmentDepRequired extends Fragment {
     double quartResult;
     double calculatetResult;
     double monthlyDepResult;
+    EditText editText, editTextOne, editTextTwo, editTextThree, editTextFour, editTextFive;
+    PensionModule pensionModule;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_deposit_required, container, false);
 
-        EditText editText = (EditText) view.findViewById(R.id.edit_current);
-        EditText editTextOne = (EditText) view.findViewById(R.id.edit_life);
-        EditText editTextTwo = (EditText) view.findViewById(R.id.edit_retire);
-        EditText editTextThree = (EditText) view.findViewById(R.id.edit_monthly);
-        EditText editTextFour = (EditText) view.findViewById(R.id.edit_amount);
-        EditText editTextFive = (EditText) view.findViewById(R.id.edit_compounded);
-       Button button = (Button) view.findViewById(R.id.calculate_button);
+        pensionModule = new PensionModule(getActivity());
 
-        int currentValue = Integer.parseInt(editText.getText().toString());
-        int life =   Integer.parseInt(editTextOne.getText().toString());
-        int retireValue =  Integer.parseInt(editTextTwo.getText().toString());
-        double monthlyValue =  Double.parseDouble(editTextThree.getText().toString());
-        double amountToHeirValue =  Double.parseDouble(editTextFour.getText().toString());
-        double compoundedValue =  Double.parseDouble(editTextFive.getText().toString());
-
-
-
-
+        editText = (EditText) view.findViewById(R.id.edit_current);
+        editTextOne = (EditText) view.findViewById(R.id.edit_life);
+        editTextTwo = (EditText) view.findViewById(R.id.edit_retire);
+        editTextThree = (EditText) view.findViewById(R.id.edit_monthly);
+        editTextFour = (EditText) view.findViewById(R.id.edit_amount);
+        editTextFive = (EditText) view.findViewById(R.id.edit_compounded);
+        Button button = (Button) view.findViewById(R.id.calculate_button);
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                calculateResult();
+
                 Intent intent = new Intent(getActivity(), AnsDepositReq.class);
-                Bundle paramaters = new Bundle();
-                paramaters.putDouble("quart",quartResult);
-                paramaters.putDouble("calculate",calculatetResult);
-                paramaters.putDouble("monthly",monthlyDepResult);
-                
-                intent.putExtras(paramaters);
+                intent.putExtra("quart", quartResult);
+                //intent.putExtra("calculate",);
+                //intent.putExtra("monthly",);
                 
                 startActivity(intent);
 
@@ -74,11 +66,28 @@ public class FragmentDepRequired extends Fragment {
             }
         });
 
-
         return view;
 
     }
 
+    private void calculateResult() {
+
+        int currentAge = Integer.parseInt(editText.getText().toString());
+        //int lifeExpectancy = Integer.parseInt(editTextOne.getText().toString());
+        int retireAge = Integer.parseInt(editTextTwo.getText().toString());
+        //double monthlyWithdrawal = Double.parseDouble(editTextThree.getText().toString());
+        //double amountToHeir = Double.parseDouble(editTextFour.getText().toString());
+        //double compoundedInterest = Double.parseDouble(editTextFive.getText().toString());
+
+        pensionModule.getQuarterly(currentAge, retireAge);
+
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("REGULAR DEPOSIT REQUIRED");
+    }
 }
 
 

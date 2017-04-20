@@ -7,7 +7,8 @@
         <item name="colorPrimaryDark">@color/accent_material_light</item>
         <item name="colorAccent">@color/float_message</item>
         <item name="android:colorControlNormal">@color/icons</item>
-        <item name="android:textColorPrimary">@color/icons</item> // I don't want to set this, changes everywhere.
+        <item name="android:textColorPrimary">@color/icons</item>
+        // I don't want to set this, changes everywhere.
         <item name="android:textColorSecondary">@color/icons</item>
     </style>
 
@@ -15,5 +16,9 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

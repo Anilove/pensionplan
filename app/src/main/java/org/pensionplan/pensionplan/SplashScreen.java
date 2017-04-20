@@ -12,8 +12,9 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        Realm.init(this);
+       Realm realm = Realm.getDefaultInstance();
 
-        Realm realm = Realm.getDefaultInstance();
         User user = realm.where(User.class).findFirst();
 
         User splash = new User();

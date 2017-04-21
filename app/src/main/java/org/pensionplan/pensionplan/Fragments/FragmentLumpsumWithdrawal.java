@@ -68,11 +68,14 @@ public class FragmentLumpsumWithdrawal extends Fragment{
         double  compoundedInterest= Double.parseDouble(editTextFour.getText().toString());
 
         // Log.e("value",currentAge+"V" +retireAge);
+
         lumpsumWithdrawal = new LumpsumWithdrawal(currentAge, retireAge, lifeExpectancy, amountDep,compoundedInterest);
-        lumpsumWithResult = lumpsumWithdrawal.getCurrentequivalent();
+        lumpsumWithResult = lumpsumWithdrawal.getcurrentequivalent();
 
 
 
+
+       // Log.e("quarterlyvalue",lumpsumWithResult+"V");
 
         Intent intent = new Intent(getActivity(),AnsLumpsumWith.class);
         intent.putExtra("lumpsum", String.valueOf(lumpsumWithResult));

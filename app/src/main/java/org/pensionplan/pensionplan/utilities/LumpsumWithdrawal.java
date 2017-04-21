@@ -48,6 +48,7 @@ public class LumpsumWithdrawal {
 
 
     // Life span after retirement
+    // Life span after retirement
     public double getLifespan() {
         return MonthlyWithdrawal.LIFE_EXPECTANCE - RETIREMENT_AGE;
     }
@@ -145,10 +146,6 @@ public class LumpsumWithdrawal {
     }
 
 
-    public double getCurrentequivalent() {
-        return currentequivalent;
+    public double getCurrentequivalent() {return currentequivalent;
     }
-
-
-
 }

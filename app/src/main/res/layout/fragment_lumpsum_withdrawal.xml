@@ -124,34 +124,14 @@
         android:id="@+id/view_monthly"
         />
 
-    <TextView
-        android:id="@+id/monthlyWith"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/view_monthly"
-        android:text="Monthly Withdrawal\n(retirement)"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:textStyle="bold"
-        android:textSize="20sp" />
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="1000"
-        android:layout_below="@id/view_monthly"
-        android:layout_alignRight="@id/monthlyWith"
-        android:padding="20dp"
-        android:layout_alignEnd="@id/monthlyWith"
-        android:id="@+id/edit_monthly"
-        />
 
     <TextView
         android:id="@+id/compounded_times"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/monthlyWith"
+        android:layout_below="@+id/view_monthly"
         android:layout_margin="5dp"
         android:padding="10dp"
         android:textStyle="bold"
@@ -164,7 +144,7 @@
         android:hint="4"
         android:padding="30dp"
         android:id="@+id/edit_compounded"
-        android:layout_below="@+id/monthlyWith"
+        android:layout_below="@+id/view_monthly"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 

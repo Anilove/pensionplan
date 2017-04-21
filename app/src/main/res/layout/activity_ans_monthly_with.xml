@@ -21,18 +21,18 @@
             android:layout_below="@id/lump_with"
             android:text="Years to Retire"
             android:layout_marginTop="10dp"
-            android:padding="5dp"
+            android:padding="10dp"
             android:layout_marginBottom="20dp"
             android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RESULT"
-            android:textSize="20sp"
-            android:padding="5dp"
+            android:textSize="25sp"
+            android:padding="10dp"
             android:textStyle="bold"
             android:id="@+id/result_lump_with"
             />
@@ -51,20 +51,20 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/yearsRetire_text"
             android:textStyle="bold"
-            android:padding="5dp"
+            android:padding="10dp"
             android:text="Monthly withdrawal(retirement)"
             android:layout_marginBottom="20dp"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RESULT"
-            android:padding="5dp"
-            android:textSize="20sp"
+            android:padding="10dp"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:id="@+id/eresult_with"
+            android:id="@+id/result_with"
             />
         <View
             android:layout_width="match_parent"
@@ -79,20 +79,20 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/LumpsumAtPens"
             android:textStyle="bold"
-            android:padding="5dp"
+            android:padding="10dp"
             android:layout_marginBottom="20dp"
             android:text="Lumpsum Withdrawal(Retirement)"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RESULT"
-            android:padding="5dp"
-            android:textSize="20sp"
+            android:padding="10dp"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:id="@+id/editText7"
+            android:id="@+id/result_lump"
             />
 
 
@@ -108,16 +108,5 @@
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:background="@color/primary_light"
-        android:text="SAVE"
 
-        />
 </RelativeLayout>

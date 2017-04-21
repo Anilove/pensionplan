@@ -14,24 +14,21 @@ public class AnsDepositReq extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ans_deposit_req);
 
-       // TextView textView = (TextView)findViewById(R.id.result_textone);
-        TextView textViewTwo = (TextView)findViewById(R.id.result_texttwo);
-        TextView textViewThree = (TextView)findViewById(R.id.result_textthree);
-        TextView textViewFour = (TextView)findViewById(R.id.result_textfour);
+        // TextView textView = (TextView)findViewById(R.id.result_textone);
+        TextView textViewTwo = (TextView) findViewById(R.id.result_texttwo);
+        TextView textViewThree = (TextView) findViewById(R.id.result_textthree);
+        TextView textViewFour = (TextView) findViewById(R.id.result_textfour);
+
 
         Intent getValues = getIntent();
         String quart = getValues.getStringExtra("quart");
-
-        Intent getValues1 = getIntent();
-        String calculate = getValues1.getStringExtra("calculate");
-
-        Intent getValues2 = getIntent();
-        String monthly = getValues2.getStringExtra("monthly");
+        String calculate = getValues.getStringExtra("calculate");
+        String monthly = getValues.getStringExtra("monthly");
 
         //textView.setText(quart);
-        textViewTwo.setText(quart);
+        textViewTwo.setText(monthly);
         textViewThree.setText(calculate);
-        textViewFour.setText(monthly);
+        textViewFour.setText(quart);
 
         // How to call pension module
         //PensionModule pensionModule = new PensionModule(23, 60, 80, 2000, 30000, 4);

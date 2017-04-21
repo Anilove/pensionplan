@@ -131,7 +131,9 @@ public class PensionModuleTwo {
 
             };
             //double FinalBeginningValue = (Math.round(BeginningValue)*100);
-            return BeginningValue;
+            return Math.round(BeginningValue *100)/100;
+
+
         }
         public double getImpliedInterest(){
             double ImpliedInterest = (1 + annualInterest);
@@ -164,7 +166,7 @@ public class PensionModuleTwo {
 
 
             double Lumpsum = getCalculate()/powInterestN;
-            return Lumpsum;
+            return Math.round(Lumpsum * 100)/100;
         }
 
         // Setters

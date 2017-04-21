@@ -46,7 +46,7 @@ public class MonthlyWithdrawal {
 
         // Prepare output
         this.amountWithdrawal = getMonthlyWithdrawal();
-        this.lumpSumWithdrawal = getLumpsumWithdrawal();
+        this.lumpSumWithdrawal = getLumpsumWithdrawalTotal();
     }
 
 
@@ -142,7 +142,7 @@ public class MonthlyWithdrawal {
         return NewMonthWith;
     }
 
-    public double getLumpsumWithdrawal(){
+    public double getLumpsumWithdrawalTotal(){
         double Divinflation = 1 + inflation;
         double divinflationtemp = Math.pow(Divinflation,getPlanningPeriod());
         double Temp = FirstLumpsumWith * divinflationtemp;

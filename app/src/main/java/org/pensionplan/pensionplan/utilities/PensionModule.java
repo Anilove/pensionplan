@@ -30,7 +30,7 @@ public class PensionModule {
 	private double lumpSumWithdrawal;
 
 	// Null constructor
-	public PensionModule(FragmentActivity activity) {
+	public PensionModule() {
 
 	}
 
@@ -65,11 +65,11 @@ public class PensionModule {
 	}
 	
 	// Quarterly contribution
-	public double getQuarterly(int currentAge, int retirementAge){
+	public double getQuarterly(){
 		double quarterly = 1 + inflation;
 		int planningPeriod = retirementAge -  currentAge;
 		double quarterlyPower = Math.pow(quarterly, planningPeriod);
-		return quarterlyPower * monthlyWithdrawal * 3;
+		return Math.round(((quarterlyPower * monthlyWithdrawal * 3)*100)/100);
 
 
 	}
@@ -79,7 +79,7 @@ public class PensionModule {
 		double annualAdd = 1 + annualIncrease;
 		int lifespan =(LIFE_EXPECTANCE -RETIREMENT_AGE);
 		int lifespanSub =lifespan-1;
-		return (Math.pow(annualAdd,lifespanSub)) * getQuarterly(currentAge, retirementAge);
+		return (Math.pow(annualAdd,lifespanSub)) * getQuarterly();
 
 
 	}

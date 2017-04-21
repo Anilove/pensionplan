@@ -27,8 +27,8 @@ public class FragmentDepRequired extends Fragment {
     public static double annualIncrease = 0.12;
     public static double annualInterest = 0.22;
     public static double McompoundedTimes = 0.25;
-    double quartResult;
-    double calculatetResult;
+
+    double calculatedResult;
     double monthlyDepResult;
     EditText editText, editTextOne, editTextTwo, editTextThree, editTextFour, editTextFive;
     PensionModule pensionModule;
@@ -37,8 +37,6 @@ public class FragmentDepRequired extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_deposit_required, container, false);
-
-        pensionModule = new PensionModule(getActivity());
 
         editText = (EditText) view.findViewById(R.id.edit_current);
         editTextOne = (EditText) view.findViewById(R.id.edit_life);
@@ -55,14 +53,6 @@ public class FragmentDepRequired extends Fragment {
 
                 calculateResult();
 
-                Intent intent = new Intent(getActivity(), AnsDepositReq.class);
-                intent.putExtra("quart", quartResult);
-                //intent.putExtra("calculate",);
-                //intent.putExtra("monthly",);
-                
-                startActivity(intent);
-
-
             }
         });
 
@@ -73,13 +63,26 @@ public class FragmentDepRequired extends Fragment {
     private void calculateResult() {
 
         int currentAge = Integer.parseInt(editText.getText().toString());
-        //int lifeExpectancy = Integer.parseInt(editTextOne.getText().toString());
+        int lifeExpectancy = Integer.parseInt(editTextOne.getText().toString());
         int retireAge = Integer.parseInt(editTextTwo.getText().toString());
-        //double monthlyWithdrawal = Double.parseDouble(editTextThree.getText().toString());
-        //double amountToHeir = Double.parseDouble(editTextFour.getText().toString());
-        //double compoundedInterest = Double.parseDouble(editTextFive.getText().toString());
+        double monthlyWithdrawal = Double.parseDouble(editTextThree.getText().toString());
+        double amountToHeir = Double.parseDouble(editTextFour.getText().toString());
+        double compoundedInterest = Double.parseDouble(editTextFive.getText().toString());
 
-        pensionModule.getQuarterly(currentAge, retireAge);
+       // Log.e("value",currentAge+"V" +retireAge);
+        pensionModule = new PensionModule(currentAge,retireAge,lifeExpectancy,monthlyWithdrawal,amountToHeir,compoundedInterest);
+        double quarterly = pensionModule.getQuarterly();
+        calculatedResult  = pensionModule.calculate();
+        monthlyDepResult = pensionModule.getMonthlyDep();
+
+       /* Log.e("quarterlyvalue",quarterly+"V");
+        Log.e("quarterlyvalue",calculatedResult+"V");
+        Log.e("quarterlyvalue",monthlyDepResult+"V");*/
+        Intent intent = new Intent(getActivity(),AnsDepositReq.class);
+        intent.putExtra("quart", String.valueOf(quarterly));
+        intent.putExtra("calculate", String.valueOf(calculatedResult));
+        intent.putExtra("monthly", String.valueOf(monthlyDepResult));
+        getActivity().startActivity(intent);
 
     }
 

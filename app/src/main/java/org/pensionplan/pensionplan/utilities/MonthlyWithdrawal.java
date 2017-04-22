@@ -174,7 +174,6 @@ public class MonthlyWithdrawal {
         FirstLumpsumWith = firstLumpsumWith;
     }
 
-
     public void setAmountToHeir(double amountToHeir) {
         this.amountToHeir = amountToHeir;
     }

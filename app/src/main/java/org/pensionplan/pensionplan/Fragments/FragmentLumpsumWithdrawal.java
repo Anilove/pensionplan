@@ -64,7 +64,7 @@ public class FragmentLumpsumWithdrawal extends Fragment{
         int currentAge = Integer.parseInt(editText.getText().toString());
         int lifeExpectancy = Integer.parseInt(editTextOne.getText().toString());
         int retireAge = Integer.parseInt(editTextTwo.getText().toString());
-        double amountDep = Double.parseDouble(editTextFour.getText().toString());
+        double amountDep = Double.parseDouble(editTextThree.getText().toString());
         double  compoundedInterest= Double.parseDouble(editTextFour.getText().toString());
 
         // Log.e("value",currentAge+"V" +retireAge);

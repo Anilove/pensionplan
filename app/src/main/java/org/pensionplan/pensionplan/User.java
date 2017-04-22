@@ -11,7 +11,7 @@ import io.realm.annotations.PrimaryKey;
 public class User extends RealmObject {
     public String          name;
     public String             email;
-    public int             age;
+    public int             password;
 
 
     @PrimaryKey
@@ -27,10 +27,14 @@ public class User extends RealmObject {
     public void   setName(String name) {
         this.name = name; }
 
-    public String    getAge() { return email; }
 
-    public void   setAge(int age) {
-        this.age = age; }
+    public int getPassword() {
+        return password;
+    }
+
+    public void setPassword(int password) {
+        this.password = password;
+    }
 
     public String getEmail() {
         return email;

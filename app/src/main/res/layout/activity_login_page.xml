@@ -48,14 +48,36 @@
         />
 
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/log"
         android:layout_marginTop="20sp"
         android:gravity="center"
+        android:layout_below="@id/log"
+        android:text="Not Registered Yet?"
+        android:id="@+id/register"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign UP"
+            android:gravity="center"
+            android:layout_below="@id/register"
+            android:textColor="@color/disable"
+            android:textSize="20sp"
+            android:id="@+id/signup"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/signup"
         android:text="forget PIN?"
         android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
 </RelativeLayout>

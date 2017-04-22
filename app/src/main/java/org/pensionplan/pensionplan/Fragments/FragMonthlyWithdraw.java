@@ -67,10 +67,10 @@ public class FragMonthlyWithdraw extends Fragment {
         int currentAge = Integer.parseInt(editText.getText().toString());
         int lifeExpectancy = Integer.parseInt(editTextOne.getText().toString());
         int retireAge = Integer.parseInt(editTextTwo.getText().toString());
-        double lumpsumWith = Double.parseDouble(editTextFour.getText().toString());
-        double amountDep = Double.parseDouble(editTextFour.getText().toString());
-        double amountToHeir = Double.parseDouble(editTextFour.getText().toString());
-        double compoundedInterest = Double.parseDouble(editTextFour.getText().toString());
+        double amountDep  = Double.parseDouble(editTextThree.getText().toString());
+        double amountToHeir= Double.parseDouble(editTextFour.getText().toString());
+        double lumpsumWith = Double.parseDouble(editTextFive.getText().toString());
+        double compoundedInterest = Double.parseDouble(editTextSix.getText().toString());
 
         // Log.e("value",currentAge+"V" +retireAge);
         monthlyWithdrawal = new MonthlyWithdrawal(currentAge,retireAge,lifeExpectancy,lumpsumWith, amountDep,amountToHeir, compoundedInterest);
@@ -86,8 +86,9 @@ public class FragMonthlyWithdraw extends Fragment {
 
         getActivity().startActivity(intent);
     }
-    @Override
 
+
+    @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("MONTHLY WITHDRAWAL");

@@ -28,7 +28,7 @@ public class LumpsumWithdrawal {
 
 
     // Output field
-    private double InitlumpsumWithdrawal;
+
     private double currentequivalent;
 
     // Null constructor
@@ -42,12 +42,10 @@ public class LumpsumWithdrawal {
         this.compoundedTimes = compoundedTimes;
 
         // Prepare output
-        this.InitlumpsumWithdrawal= getLumpsumWith();
+
         this.currentequivalent = getcurrentequivalent();
     }
-
-
-    // Life span after retirement
+    
     // Life span after retirement
     public double getLifespan() {
         return MonthlyWithdrawal.LIFE_EXPECTANCE - RETIREMENT_AGE;
@@ -135,16 +133,13 @@ public class LumpsumWithdrawal {
         this.lifeExpectance = lifeExpectance;
     }
 
-
     public void setLumpsumInvested(double lumpsumInvested) {
         this.LumpsumDep = lumpsumInvested;
     }
 
-
-    public double getInitlumpsumWithdrawal() {
-        return InitlumpsumWithdrawal;
+    public void setCompoundedTimes(double compoundedTimes) {
+        this.compoundedTimes = compoundedTimes;
     }
-
 
     public double getCurrentequivalent() {return currentequivalent;
     }

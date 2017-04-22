@@ -28,6 +28,7 @@
        android:layout_centerInParent="true"
         android:gravity="center"
         android:hint="Enter PIN"
+        android:textColor="@android:color/black"
         android:maxLength="4"
         android:inputType="numberPassword"
         android:padding="10dp"

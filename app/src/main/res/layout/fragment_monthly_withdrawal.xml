@@ -25,6 +25,7 @@
         android:layout_alignEnd="@id/current_age_text"
         android:layout_alignRight="@id/current_age_text"
         android:hint="age"
+        android:textColor="@android:color/black"
         android:padding="20dp"
         android:layout_marginTop="10dp"
         android:layout_below="@id/tool_month_with"
@@ -56,6 +57,7 @@
         android:layout_alignRight="@id/retire_age_text"
         android:layout_below="@id/view_current"
         android:hint="age"
+        android:textColor="@android:color/black"
         android:padding="20dp"
         android:id="@+id/edit_retire" />
     <View
@@ -86,6 +88,7 @@
         android:layout_alignRight="@id/life_text"
         android:layout_below="@id/view_retire"
         android:hint="age"
+        android:textColor="@android:color/black"
         android:padding="20dp"
         android:id="@+id/edit_life" />
 
@@ -114,6 +117,7 @@
         android:layout_height="wrap_content"
         android:hint="2000"
         android:padding="20dp"
+        android:textColor="@android:color/black"
         android:layout_below="@id/view_life"
        android:layout_alignRight="@id/lumpsumWith_text"
         android:layout_alignEnd="@id/lumpsumWith_text"
@@ -142,6 +146,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
+        android:textColor="@android:color/black"
         android:layout_alignEnd="@id/amount_deposit_text"
         android:layout_alignRight="@id/amount_deposit_text"
         android:layout_below="@id/lumpsumWith_text"
@@ -173,6 +178,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
+        android:textColor="@android:color/black"
         android:layout_alignEnd="@id/amount_deposit_text"
         android:layout_alignRight="@id/amountHeirs_text"
         android:layout_below="@id/amount_deposit_text"
@@ -196,6 +202,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
+        android:textColor="@android:color/black"
         android:layout_alignEnd="@id/compounded_text"
         android:layout_alignRight="@id/compounded_text"
         android:layout_below="@id/amountHeirs_text"

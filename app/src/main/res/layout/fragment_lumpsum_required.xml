@@ -26,6 +26,7 @@
         android:layout_below="@id/tool_month_with"
         android:layout_marginTop="20dp"
         android:id="@+id/edit_currentlump"
+        android:textColor="@android:color/black"
         android:padding="20dp"
         android:layout_alignEnd="@id/current_age_text"
         android:layout_alignRight="@id/current_age_text"
@@ -56,6 +57,7 @@
         android:layout_alignEnd="@id/retire_age_text"
         android:layout_alignRight="@id/retire_age_text"
         android:padding="20dp"
+        android:textColor="@android:color/black"
         android:id="@+id/edit_retirelump"
         android:layout_below="@id/view_current"
         android:hint="age" />
@@ -86,6 +88,7 @@
         android:layout_alignEnd="@id/life_text"
         android:layout_alignRight="@id/life_text"
         android:padding="20dp"
+        android:textColor="@android:color/black"
         android:layout_below="@id/retire_age_text"
         android:hint="age"
         android:id="@+id/edit_lifelump" />
@@ -119,6 +122,7 @@
         android:layout_below="@id/view_life"
         android:id="@+id/edit_monthlylump"
         android:layout_toLeftOf="@id/monthlyWith_text"
+        android:textColor="@android:color/black"
         android:layout_alignRight="@+id/monthlyWith_text"
         android:layout_alignEnd="@+id/monthlyWith_text" />
 
@@ -137,6 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="4"
+        android:textColor="@android:color/black"
         android:id="@+id/edit_compoundedlump"
         android:padding="30dp"
         android:layout_below="@+id/monthlyWith_text"

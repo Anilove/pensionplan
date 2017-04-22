@@ -25,6 +25,7 @@
         android:layout_marginTop="20dp"
         android:padding="20dp"
         android:inputType="number"
+        android:textColor="@android:color/black"
         android:id="@+id/edit_current"
         android:layout_alignEnd="@id/current_age_text"
         android:layout_alignRight="@id/current_age_text"
@@ -58,6 +59,7 @@
         android:id="@+id/edit_life"
         android:layout_alignRight="@id/life_text"
         android:layout_below="@id/view_current"
+        android:textColor="@android:color/black"
         android:hint="age"
         />
     <View
@@ -87,6 +89,7 @@
         android:layout_alignEnd="@id/retire_age_text"
         android:layout_alignRight="@id/retire_age_text"
         android:padding="20dp"
+        android:textColor="@android:color/black"
         android:inputType="number"
         android:layout_below="@id/view_life"
         android:hint="age" />
@@ -115,6 +118,7 @@
         android:hint="30000"
         android:inputType="number"
         android:id="@+id/edit_monthly"
+        android:textColor="@android:color/black"
         android:layout_below="@+id/view_retire"
         android:layout_alignParentRight="true"
         android:padding="20dp"
@@ -140,6 +144,7 @@
         android:layout_height="wrap_content"
         android:hint="30000"
         android:inputType="number"
+        android:textColor="@android:color/black"
         android:id="@+id/edit_amount"
         android:layout_below="@+id/monthlyWith_text"
         android:layout_alignParentRight="true"
@@ -165,6 +170,7 @@
         android:inputType="number"
         android:id="@+id/edit_compounded"
         android:padding="30dp"
+        android:textColor="@android:color/black"
         android:layout_below="@+id/amountHeirs_text"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

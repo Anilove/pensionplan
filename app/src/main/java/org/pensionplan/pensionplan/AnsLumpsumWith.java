@@ -23,7 +23,7 @@ public class AnsLumpsumWith extends AppCompatActivity {
 
 
         //textView.setText(quart);
-        textViewTwo.setText(lumpsum);
+        textViewTwo.setText("GHS" + lumpsum);
 
 
     }

@@ -25,8 +25,8 @@ public class AnsMonthlyWith extends AppCompatActivity {
 
 
         //textView.setText(quart);
-        textViewTwo.setText(monthly);
-        textViewThree.setText(lumpsum);
+        textViewTwo.setText("GHS" + monthly);
+        textViewThree.setText("GHS" + lumpsum);
 
     }
 }

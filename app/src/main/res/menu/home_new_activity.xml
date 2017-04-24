@@ -4,7 +4,9 @@
         <item
             android:id="@+id/menu_monthly_dep"
             android:icon="@drawable/wallet_with_bill"
-            android:title="REGULAR DEPOSIT REQUIRED" />
+            android:title="REGULAR DEPOSIT REQUIRED"
+
+            />
         <item
             android:id="@+id/menu_lumpsum_dep"
             android:icon="@drawable/dollar_bill_paper"
@@ -20,7 +22,7 @@
         <item
             android:id="@+id/menu_trustee_list"
             android:icon="@drawable/list"
-            android:title="Pension Trustees"
+            android:title="PENSION TRUSTEES"
 
             />
     </group>
@@ -30,11 +32,11 @@
         <item
             android:id="@+id/menu_settings_home"
             android:icon="@drawable/settings"
-            android:title="Settings" />
+            android:title="SETTINGS" />
         <item
             android:id="@+id/menu_help_home"
             android:icon="@drawable/info"
-            android:title="Help" />
+            android:title="HELP" />
 
     </group>
 </menu>

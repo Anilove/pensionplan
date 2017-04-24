@@ -26,9 +26,9 @@ public class AnsDepositReq extends AppCompatActivity {
         String monthly = getValues.getStringExtra("monthly");
 
         //textView.setText(quart);
-        textViewTwo.setText(monthly);
-        textViewThree.setText(calculate);
-        textViewFour.setText(quart);
+        textViewTwo.setText("GHS" + "" +monthly);
+        textViewThree.setText("GHS" + calculate);
+        textViewFour.setText("GHS" + quart);
 
         // How to call pension module
         //PensionModule pensionModule = new PensionModule(23, 60, 80, 2000, 30000, 4);

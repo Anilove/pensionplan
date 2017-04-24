@@ -24,8 +24,8 @@ public class AnsLumpsumReq extends AppCompatActivity {
 
 
         //textView.setText(quart);
-        textViewTwo.setText(lumpsum);
-        textViewThree.setText(calculate);
+        textViewTwo.setText("GHS" + lumpsum);
+        textViewThree.setText("GHS" + calculate);
 
     }
 }

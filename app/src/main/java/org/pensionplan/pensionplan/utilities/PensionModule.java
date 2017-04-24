@@ -1,5 +1,6 @@
 package org.pensionplan.pensionplan.utilities;
 
+import android.icu.math.BigDecimal;
 import android.support.v4.app.FragmentActivity;
 
 public class PensionModule {
@@ -176,9 +177,7 @@ public class PensionModule {
 	public double getMonthlyDep(){
 		double AddInterest = 1 + (getRresult()/ 100);
 		double AddGrowth = 1 + (getGresult() / 100);
-		//double InterestGrowth = Math.pow(AddGrowth, getNresult(compoundedTimes, currentAge));
 		double quartelyCompounded = 12/compoundedTimes;
-		//double DifferenceOf =getRresult(compoundedTimes) - getGresult(compoundedTimes);
 		double DifferenceOf = (Math.ceil((getRresult() - getGresult())*100)*10)/1000;
 
 		double InterestGrowth = Math.pow(AddInterest, getNresult())- Math.pow(AddGrowth, getNresult());;
@@ -186,8 +185,9 @@ public class PensionModule {
 		double MonthlyDep = calculate()/Temp;
 
 		double finalMonththly = MonthlyDep /(quartelyCompounded);
-
-		return 	Math.round(finalMonththly *100)/100;
+	 finalMonththly = Math.round(finalMonththly *100)/100;
+		//finalMonththly =
+		return  finalMonththly;
 	}
 	
 	

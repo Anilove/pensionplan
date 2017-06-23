@@ -28,21 +28,21 @@ public class FragmentTrusteeList extends Fragment {
 
 
 
-        Trustees nameone = new Trustees("PETRA TRUST COMPANY LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees nametwo = new Trustees("METROPOLITAN PENSIONS TRUST GHANA","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namethree = new Trustees("PENSIONS ALLIANCE TRUST COMPANY","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namefour = new Trustees("PROVIDENTLIFE TRUST COMPANY","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namefive = new Trustees("UNIVERSAL PENSIONS MASTER TRUST LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namesix = new Trustees("SECURE PENSIONS TRUST LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees nameseven = new Trustees("ENTERPRISE TRUSTEES LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees nameeight = new Trustees("UNITED PENSION TRUSTEES LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namenine = new Trustees("AXIS PENSION TRUST LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees nameten = new Trustees("GENERAL TRUST COMPANY LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees nameeleven = new Trustees("GALCO PENSIONS TRUSTEE LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees nametwelve = new Trustees("NEGOTIATED BENEFITS LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namethirteen = new Trustees("STALLION TRUST & ADMINISTRATION LTD","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namefourteen = new Trustees("NTHC TRUSTEES","113,Airport West,Near Oasis Lodge,Dzorwulu");
-        Trustees namefifteen = new Trustees("HEDGE PENSIONS TRUST","113,Airport West,Near Oasis Lodge,Dzorwulu");
+        Trustees nameone = new Trustees("PETRA TRUST COMPANY LTD", "113,Airport West,Near Oasis Lodge,Dzorwulu");
+        Trustees nametwo = new Trustees("METROPOLITAN PENSIONS TRUST GHANA", "81 Tabon Link,North Ridge Crescent,Accra");
+        Trustees namethree = new Trustees("PENSIONS ALLIANCE TRUST COMPANY", "No.3,55A Kakramadu Link,Accra");
+        Trustees namefour = new Trustees("PROVIDENTLIFE TRUST COMPANY", "Provident Towers,Ring Road Central,Accra");
+        Trustees namefive = new Trustees("UNIVERSAL PENSIONS MASTER TRUST LTD", "762, Kade Ave. Kanda Estate,Accra");
+        Trustees namesix = new Trustees("SECURE PENSIONS TRUST LTD", "91,Osu Badu St,Accra");
+        Trustees nameseven = new Trustees("ENTERPRISE TRUSTEES LTD", "47,Patrice Lumumba Rd, Airport Res.Area, Accra ");
+        Trustees nameeight = new Trustees("UNITED PENSION TRUSTEES LTD", "21, Vanguard House, Independence Avenue Ridge, Accra");
+        Trustees namenine = new Trustees("AXIS PENSION TRUST LTD", "4,Ibadan Avenue, East Legon,Accra");
+        Trustees nameten = new Trustees("GENERAL TRUST COMPANY LTD", "8,Saflo Link AbelemKpe,Accra");
+        Trustees nameeleven = new Trustees("GLICO PENSIONS TRUSTEE LTD", "47,Kwame Nkrumah Avenue Adabraka, Accra");
+        Trustees nametwelve = new Trustees("NEGOTIATED BENEFITS LTD", "8,Kakramadu Street,Cantoments,Accra");
+        Trustees namethirteen = new Trustees("STALLION TRUST & ADMINISTRATION LTD", "10,Roman RD,Roman Ridge,Accra");
+        Trustees namefourteen = new Trustees("NTHC TRUSTEES", "18,Gamel Abdul Nasser Ave. RingWay Estates,Accra");
+        Trustees namefifteen = new Trustees("HEDGE PENSIONS TRUST", "National Secretariat,CLOSSAG Ministries,Accra");
 
 
         List<Trustees> names = new ArrayList<>();

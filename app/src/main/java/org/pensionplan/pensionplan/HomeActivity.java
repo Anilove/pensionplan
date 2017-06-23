@@ -46,21 +46,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-        /*REALM DATABASE
 
-        Realm realm = Realm.getDefaultInstance();
-       // realm.where(User.class).findFirst();
-
-        User user = realm.where(User.class).findFirst();
-        User userpin = new User();
-        //userpin.id ="" ;
-        userpin.email = "editTextmail";
-        userpin.name = "editTextname";
-
-
-       realm.beginTransaction();
-        realm.copyToRealmOrUpdate(user);
-        realm.commitTransaction();*/
     }
 
     @Override

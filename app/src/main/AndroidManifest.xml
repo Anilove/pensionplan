@@ -19,7 +19,6 @@
         <activity android:name=".SignUp" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".loginPage" />
-        <activity android:name=".TrusteesListShow" />
         <activity android:name=".AnsDepositReq" />
         <activity android:name=".AnsLumpsumReq" />
         <activity android:name=".AnsLumpsumWith" />

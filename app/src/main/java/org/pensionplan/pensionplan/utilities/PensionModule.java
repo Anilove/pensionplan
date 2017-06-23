@@ -1,7 +1,12 @@
 package org.pensionplan.pensionplan.utilities;
 
+import android.annotation.TargetApi;
 import android.icu.math.BigDecimal;
+import android.os.Build;
 import android.support.v4.app.FragmentActivity;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class PensionModule {
 
@@ -132,8 +137,11 @@ public class PensionModule {
 			}
 
 			lifespan = lifespan - compoundedTimesDep;
-		};
-		return Math.round(BeginningValue * 100)/100;
+		}
+
+		double Val =  BeginningValue;
+
+		return Val;
 	}
 
 	public double getImpliedInterest(){

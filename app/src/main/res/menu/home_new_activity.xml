@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:visible="true"
+        android:enabled="true">
         <item
             android:id="@+id/menu_monthly_dep"
             android:icon="@drawable/wallet_with_bill"
-            android:title="REGULAR DEPOSIT REQUIRED"
-
-            />
+            android:title="REGULAR DEPOSIT REQUIRED"/>
         <item
             android:id="@+id/menu_lumpsum_dep"
             android:icon="@drawable/dollar_bill_paper"
@@ -28,7 +28,9 @@
     </group>
 
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:visible="true"
+        android:enabled="true">
         <item
             android:id="@+id/menu_settings_home"
             android:icon="@drawable/settings"

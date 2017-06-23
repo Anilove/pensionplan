@@ -82,7 +82,7 @@ public class FragMonthlyWithdraw extends Fragment {
         //Log.e("quarterlyvalue",lumpsumDepResult+"V");
         Intent intent = new Intent(getActivity(), AnsMonthlyWith.class);
         intent.putExtra("monthly", String.valueOf(monthlyWithResult));
-        intent.putExtra("lumpsum", String.valueOf(lumpsumWithResult));
+        intent.putExtra("lumpsum", String.valueOf(String.format("%20.2f",lumpsumWithResult)));
 
         getActivity().startActivity(intent);
     }

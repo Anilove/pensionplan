@@ -80,7 +80,7 @@ public class FragmentDepRequired extends Fragment {
         Log.e("quarterlyvalue",monthlyDepResult+"V");*/
         Intent intent = new Intent(getActivity(),AnsDepositReq.class);
         intent.putExtra("quart", String.valueOf(quarterly));
-        intent.putExtra("calculate", String.valueOf(calculatedResult));
+        intent.putExtra("calculate", String.valueOf(String.format("%20.2f",calculatedResult)));
         intent.putExtra("monthly", String.valueOf(monthlyDepResult));
         getActivity().startActivity(intent);
 

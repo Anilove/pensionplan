@@ -75,8 +75,8 @@ import org.pensionplan.pensionplan.utilities.PensionModuleTwo;
         Log.e("quarterlyvalue",calculatedResult+"V");
         Log.e("quarterlyvalue",lumpsumDepResult+"V");
         Intent intent = new Intent(getActivity(),AnsLumpsumReq.class);
-        intent.putExtra("calculate", String.valueOf(calculatedResult));
-        intent.putExtra("lumpsum", String.valueOf(lumpsumDepResult));
+        intent.putExtra("calculate", String.valueOf(String.format("%20.2f",calculatedResult)));
+        intent.putExtra("lumpsum", String.valueOf(String.format("%20.2f",lumpsumDepResult)));
 
         getActivity().startActivity(intent);
 

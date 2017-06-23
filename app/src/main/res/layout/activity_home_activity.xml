@@ -28,6 +28,7 @@
         android:layout_gravity="start"
         app:itemIconTint="@android:color/black"
         app:headerLayout="@layout/header_layout"
+        app:itemTextColor="@android:color/black"
         app:menu="@menu/home_new_activity" />
 
 

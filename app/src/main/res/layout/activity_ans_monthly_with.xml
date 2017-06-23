@@ -14,28 +14,7 @@
             android:id="@+id/lump_with"
             />
 
-        <TextView
-            android:id="@+id/yearsRetire_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lump_with"
-            android:text="Years to Retire"
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:layout_marginBottom="20dp"
-            android:textStyle="bold"
-            android:textSize="18sp" />
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RESULT"
-            android:textSize="25sp"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:id="@+id/result_lump_with"
-            />
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
@@ -49,7 +28,6 @@
             android:id="@+id/LumpsumAtPens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/yearsRetire_text"
             android:textStyle="bold"
             android:padding="10dp"
             android:text="Monthly withdrawal(retirement)"

@@ -17,17 +17,13 @@
             android:text="PETRA TRUST COMPANY LTD"
             android:textColor="@color/primary_light"
             android:textSize="20sp"
-
-            android:textStyle="bold"
-
-            />
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/loc_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="113,Airport West,Near Oasis Lodge,Dzorwulu"
             android:textSize="20sp" />
 
     </LinearLayout>

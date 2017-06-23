@@ -78,7 +78,7 @@ public class FragmentLumpsumWithdrawal extends Fragment{
        // Log.e("quarterlyvalue",lumpsumWithResult+"V");
 
         Intent intent = new Intent(getActivity(),AnsLumpsumWith.class);
-        intent.putExtra("lumpsum", String.valueOf(lumpsumWithResult));
+        intent.putExtra("lumpsum", String.valueOf(String.format("%20.2f",lumpsumWithResult)));
 
         getActivity().startActivity(intent);
 
